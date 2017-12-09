@@ -1,0 +1,39 @@
+.canvas-container {
+ position: relative;
+ width: 800px;
+ height: 800px;
+ }
+
+ #gameCanvas {
+ position: absolute;
+ }
+ 
+ button {
+ position: absolute;
+ background-color: transparent;
+ border: none;
+ display: inline-block;
+ color: white;
+ text-decoration: none;
+ text-align: center;
+ font-size: 30px;
+ }
+
+ p {
+ 	color: white;
+ }
+ 
+ #btnEasy {
+ left: 41%;
+ top: 15%;
+ }
+ 
+ #btnMed {
+ left: 37%;
+ top: 35%;
+ }
+ 
+ #btnHard {
+ left: 41%;
+ top: 57%;
+ }
