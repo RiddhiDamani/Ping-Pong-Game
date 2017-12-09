@@ -9,31 +9,48 @@
  }
  
  button {
- position: absolute;
- background-color: transparent;
- border: none;
- display: inline-block;
- color: white;
- text-decoration: none;
- text-align: center;
- font-size: 30px;
+ 	position: absolute;
+ 	background-color: transparent;
+ 	border: none;
+ 	display: inline-block;
+ 	color: green;
+ 	text-decoration: none;
+ 	text-align: center;
+ 	font-size: 25px;
+ 	font-family: 'Courier New', 'Comic Sans MS';
+   	/*font-weight: bold;*/
  }
 
  p {
- 	color: white;
+ 	 position: absolute;
+ 	 background-color: transparent;
+ 	 border: none;
+     display: inline-block;
+     color: red;
+     text-decoration: none;
+     text-align: center;
+   	 font-size: 30px;
+   	 font-family: 'Courier New', 'Comic Sans MS';
+   	 font-variant-caps: uppercase;
+   	 /*font-weight: bold;*/
  }
- 
+
+ #caption {
+ left: 25%;
+ top: 5%;
+ }
+
  #btnEasy {
- left: 41%;
- top: 15%;
+ left: 45%;
+ top: 30%;
  }
  
  #btnMed {
- left: 37%;
+ left: 45%;
  top: 35%;
  }
  
  #btnHard {
- left: 41%;
- top: 57%;
+ left: 45%;
+ top: 40%;
  }
