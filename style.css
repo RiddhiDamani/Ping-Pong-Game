@@ -21,6 +21,19 @@
    	/*font-weight: bold;*/
  }
 
+ div.footer {
+ 	position: absolute;
+ 	background-color: transparent;
+ 	border: none;
+ 	display: inline-block;
+ 	color: red;
+ 	text-decoration: none;
+ 	text-align: center;
+ 	font-size: 15px;
+ 	font-family: 'Courier New', 'Comic Sans MS';
+   	/*font-weight: bold;*/
+ }
+
  p {
  	 position: absolute;
  	 background-color: transparent;
@@ -34,6 +47,7 @@
    	 font-variant-caps: uppercase;
    	 /*font-weight: bold;*/
  }
+
 
  #caption {
  left: 25%;
@@ -53,4 +67,9 @@
  #btnHard {
  left: 45%;
  top: 40%;
+ }
+
+ div.footer {
+ left: 25%;
+ top: 70%;
  }

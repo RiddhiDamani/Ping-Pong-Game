@@ -1,6 +1,6 @@
     var buttons;    
     var canvas; //handles information about the dimensions of our display area
-	var canvasContext; //handles underlying graphical information like we can draw rectangles/						circles or images to inside of a window or function
+	var canvasContext; //handles underlying graphical information like we can draw rectangles/circles or images to inside of a window or function
 	var ballX = 50;
 	var ballY = 50;
 	var ballSpeedX = 10;
@@ -59,9 +59,9 @@
 		if (showingWinScreen) {
 
 			canvasContext.fillStyle = 'White';
-			canvasContext.font = '20px Arial';
-			var textPos1 = 350;
-			var textPos2 = 330;
+			canvasContext.font = '20px Courier New';
+			var textPos1 = 380;
+			var textPos2 = 360;
 
 			if(player1Score >= winningScore) {
 				canvasContext.fillText("You Won!!",textPos1,200);
@@ -72,6 +72,8 @@
 
 
 			canvasContext.fillText("Click to Continue", 350, 500);
+
+			canvasContext.fillText("Press F5 Key for HomePage", 300, 550);
 			return;
 		}
 
@@ -86,8 +88,12 @@
 		//draws the ball
 		colorCircle(ballX, ballY, 10, 'white');
 		
-		canvasContext.fillText(player1Score, 100, 100);
-		canvasContext.fillText(player2Score, canvas.width-100, 100);
+		canvasContext.fillStyle = 'White';
+		canvasContext.font = '18px Courier New';
+		canvasContext.fillText("Score: ", 160, 30);
+		canvasContext.fillText(player1Score, 230, 30);
+		canvasContext.fillText("Score: ", canvas.width-230, 30);
+		canvasContext.fillText(player2Score, canvas.width-160, 30);
 
 		if(showGameScreen) {
 			colorRect(0,0,canvas.width,canvas.height,'black');
@@ -206,13 +212,13 @@
 	}
 
 	function computerMovement() {
-		var paddle2YCenter = paddle2Y + (paddleHeight/2);
+		var paddle2YCenter = paddle2Y + (paddleHeight/2); // comparing the ball to the center of the paddle
 		if (paddle2YCenter < ballY - paddleBallMovement) {
-			paddle2Y += paddleBallDetect; //paddle2Y = paddle2Y + 6
+			paddle2Y += paddleBallDetect; //paddle2Y = paddle2Y + 6 //if the paddle is above the ball, move it little down
 		}
-		else if (paddle2YCenter > ballY + paddleBallMovement)
+		else if (paddle2YCenter > ballY + paddleBallMovement) //paddleBallMoment is used to avoid the jerkiness of the paddle while moving up and down
 		{
-			paddle2Y -= paddleBallDetect; //paddle2Y = paddle2Y - 6
+			paddle2Y -= paddleBallDetect; //paddle2Y = paddle2Y - 6 //if the paddle is below the ball, move it little up
 		}
 	}
 
@@ -226,8 +232,8 @@
 	}
 
 	function drawNet() {
-		for(var i=0; i<canvas.height; i+=30) {
-			colorRect(canvas.width/2-1,i,2,20,'white');
+		for(var i=0; i<canvas.height; i+=26) {
+			colorRect(canvas.width/2-1,i,3,15,'white');
 		}
 	}
 
@@ -264,7 +270,7 @@
 	function hardMode() {
 
  		alert("Hard Mode");
- 		paddleBallDetect = 12;
+ 		paddleBallDetect = 15;
  		if(buttons.style.display === "none") 
  		{
  			buttons.style.display = "block";
